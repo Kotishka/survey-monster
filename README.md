@@ -22,8 +22,13 @@ This is a sample app for a programming assignment in CS 4261. The goal is to use
 - https://firebase.google.com/docs/web/setup#create-firebase-project
 - https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial/
 - https://ionicframework.com/docs/developing/android
+- https://codesandbox.io/s/ionicreacttabsso-1zmny?file=/src/App.tsx
 
 ## Learning Experiences
+- Learning the basics of a new framework
+- Expanding my knowledge on React
+- Learning parts of Typescript
+- Debugging new issues
 
 ## Setup
 
