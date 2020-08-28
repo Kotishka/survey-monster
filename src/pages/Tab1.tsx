@@ -1,5 +1,6 @@
 import React from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent, IonItem, IonIcon, IonLabel, IonButton } from '@ionic/react';
+import { pin, wifi, wine, warning, walk } from 'ionicons/icons';
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab1.css';
 
@@ -8,16 +9,25 @@ const Tab1: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Tab 1</IonTitle>
+          <IonTitle>Current Surveys</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Tab 1</IonTitle>
+            <IonTitle size="large">Current Surveys</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Tab 1 page" />
+        <IonCard>
+          <IonCardHeader>
+            <IonCardTitle>Test Survey One</IonCardTitle>
+          </IonCardHeader>
+
+          <IonCardContent>
+            Simple survey for information about you.
+            <IonButton>Start</IonButton>
+      </IonCardContent>
+        </IonCard>
       </IonContent>
     </IonPage>
   );
