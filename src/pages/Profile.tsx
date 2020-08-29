@@ -7,12 +7,25 @@ const Profile: React.FC = () => {
   
   return (
     <IonPage>
+      <IonHeader>
+        <IonToolbar>
+          <IonTitle>Profile</IonTitle>
+        </IonToolbar>
+      </IonHeader>
       <IonContent>
         <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">Profile</IonTitle>
           </IonToolbar>
         </IonHeader>
+        
+        <p>Add stats here:
+          Email<br />
+          Profile Pic?<br />
+          How many Surveys finished<br />
+          How many Surveys Completed?<br />
+          Etc<br />
+        </p>
       </IonContent>
     </IonPage>
   );
