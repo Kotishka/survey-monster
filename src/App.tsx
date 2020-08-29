@@ -10,10 +10,6 @@ import {
   IonTabs
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { personOutline, brushSharp, fileTrayFull } from 'ionicons/icons';
-import Tab1 from './pages/CurrentSurveys';
-import Tab2 from './pages/Create';
-import Tab3 from './pages/Profile';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -35,7 +31,6 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import MainTabs from './MainTabs';
 import Login from './Login';
-import CurrentSurveys from "./pages/CurrentSurveys";
 
 interface IUserManager {
   setIsLoggedIn: Function;
