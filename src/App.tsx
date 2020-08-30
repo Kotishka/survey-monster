@@ -29,31 +29,30 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
-import MainTabs from './MainTabs';
-import Login from './Login';
-
-interface IUserManager {
-  setIsLoggedIn: Function;
-}
-
-const user: IUserManager = {
-  setIsLoggedIn: () => {}
-};
-
-export const UserContext = React.createContext<IUserManager>(user);
+import Login from './pages/Login';
+import Home from './pages/Home';
+import SignUp from './pages/SignUp';
+import Profile from './pages/Profile';
+import Create from './pages/Create';
+import MainTabs from './pages/MainTabs';
+import CurrentSurveys from './pages/CurrentSurveys';
 
 
 const IonicApp: React.FC = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const user = useContext(UserContext);
-
-  user.setIsLoggedIn = setIsLoggedIn;
 
   return (
     <IonApp>
       <IonReactRouter>
-        <Route path="/Login" component={Login} exact={true} />
-        <Route path="/" component={isLoggedIn ? MainTabs : Login} />
+        <IonRouterOutlet>
+          <Route path="/home" component={Home} exact />
+          <Route path="/login" component={Login} exact />
+          <Route path="/signup" component={SignUp} exact />
+          <Route path="/profile" component={Profile} exact />
+          <Route path="/MainTabs" component={MainTabs} exact />
+          <Route path="/Create" component={Create} exact />
+          <Route path="/CurrentSurveys" component={CurrentSurveys} exact />
+          <Route exact path="/" render={() => <Redirect to="/home"/>} />
+        </IonRouterOutlet>
       </IonReactRouter>
     </IonApp>
   );
@@ -61,9 +60,7 @@ const IonicApp: React.FC = () => {
 
 const App: React.FC = () => {
   return (
-    <UserContext.Provider value={user}>
       <IonicApp />
-    </UserContext.Provider>
   );
 };
 
