@@ -12,7 +12,7 @@ const Login: React.FC = () => {
             setAlertText('Email is required!');
         } 
 
-        if (password.length === 0) {
+        if (!password.length) {
             setAlertText('Password is required');
         }
     }, []);

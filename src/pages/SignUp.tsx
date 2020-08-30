@@ -13,11 +13,11 @@ const SignUp: React.FC = () => {
             setAlertText('Email is required!');
         } 
 
-        if (password.length === 0) {
+        if (!password.length) {
             setAlertText('Password is required');
         }
 
-        if (confirmPassword.length === 0) {
+        if (!confirmPassword.length) {
             setAlertText('Password is required');
         }
 
