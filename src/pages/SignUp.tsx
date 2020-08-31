@@ -1,5 +1,7 @@
-import React, { useState, useContext, useCallback } from 'react';
+import React, { useState, useContext, useCallback, useEffect } from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonButton, IonItem, IonInput, IonLabel, IonAlert } from '@ionic/react';
+import { useHistory } from 'react-router';
+import { auth } from '../'
 
 const SignUp: React.FC = () => {
 
@@ -7,24 +9,23 @@ const SignUp: React.FC = () => {
     const [password, setPassword] = useState<string>("");
     const [confirmPassword, setConfirmPassword] = useState<string>("");
     const [alertText, setAlertText] = useState('');
+    const history = useHistory();
 
     const onSignup = useCallback(() => {
         if (!email.length) {
-            setAlertText('Email is required!');
-        } 
-
-        if (!password.length) {
-            setAlertText('Password is required');
-        }
-
-        if (!confirmPassword.length) {
-            setAlertText('Password is required');
-        }
-
-        if (confirmPassword !== password) {
+            setAlertText('Email is required.');
+        } else if (!password.length) {
+            setAlertText('Password is required.');
+        } else if (password.length < 6) {
+            setAlertText('Password must be at least 6 characters.');
+        } else if (!confirmPassword.length) {
+            setAlertText('Password is required.');
+        } else if (confirmPassword !== password) {
             setAlertText('Passwords do not match.');
+        } else {
+
         }
-    }, [confirmPassword, password]);
+    }, [email, confirmPassword, password]);
 
     return (
         <IonPage>
@@ -50,7 +51,6 @@ const SignUp: React.FC = () => {
                         </IonItem>
                         <IonButton expand="block" onClick={onSignup}>Sign Up</IonButton>
                         <IonButton expand="block" routerLink="/login">Login Instead</IonButton>
-                        <IonButton color="secondary" expand="block" routerLink="/home">Back</IonButton>
                         <IonAlert
                             isOpen={alertText.length > 0}
                             onDidDismiss={() => setAlertText('')}

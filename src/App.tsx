@@ -29,6 +29,8 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+
+/* imports for links */
 import Login from './pages/Login';
 import Home from './pages/Home';
 import SignUp from './pages/SignUp';
@@ -36,12 +38,16 @@ import Profile from './pages/Profile';
 import Create from './pages/Create';
 import MainTabs from './pages/MainTabs';
 import CurrentSurveys from './pages/CurrentSurveys';
+import { UserContext } from '.';
 
 
 const IonicApp: React.FC = () => {
 
+  const user = useContext(UserContext);
+
   return (
     <IonApp>
+      {user ? ( <CurrentSurveys /> ) : ( 
       <IonReactRouter>
         <IonRouterOutlet>
           <Route path="/home" component={Home} exact />
@@ -54,6 +60,7 @@ const IonicApp: React.FC = () => {
           <Route exact path="/" render={() => <Redirect to="/home"/>} />
         </IonRouterOutlet>
       </IonReactRouter>
+      )}
     </IonApp>
   );
 };

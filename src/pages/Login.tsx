@@ -1,4 +1,4 @@
-import React, { useState, useContext, useCallback } from 'react';
+import React, { useState, useContext, useCallback, useEffect } from 'react';
 import { useHistory } from 'react-router';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonButton, IonItem, IonInput, IonLabel, IonAlert } from '@ionic/react';
 import { auth } from '../'
@@ -45,7 +45,6 @@ const Login: React.FC = () => {
 						</IonItem>
 						<IonButton expand="block" onClick={onLoginin}>Login</IonButton>
 						<IonButton expand="block" routerLink="/signup">Sign Up instead</IonButton>
-						<IonButton color="secondary" expand="block" routerLink="/home">Back</IonButton>
 						<IonAlert
                             isOpen={alertText.length > 0}
                             onDidDismiss={() => setAlertText('')}
