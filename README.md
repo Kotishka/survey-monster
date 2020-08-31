@@ -16,6 +16,8 @@ This is a sample app for a programming assignment in CS 4261. The goal is to use
 - Ionic Mobile App Framework
 - React 16.13.0
 - Firebase (RESTful API) 7.19.0
+- Node v14.7.0
+- npm 6.14.7
 
 ## Guides Followed
 - https://ionicframework.com/docs/developing/starting
@@ -33,6 +35,21 @@ This is a sample app for a programming assignment in CS 4261. The goal is to use
 - Debugging new issues
 
 ## Setup
+1. Make sure that Node and npm are are the latest version. 
+
+Run the following in a new terminal window:
+```
+node --version
+npm --version
+```
+Node should be at least v14.7.0 and npm should at least be 6.14.7. To download the latest verison, go to nodejs.org/en/download/.
+
+2. Install Ionic CLI with npm:
+```
+npm install -g @ionic/cli
+```
+
+Now you can run the project!
 
 ## Running the Project
 You may deploy the project either locally on web browser or on android. Please make sure that you have the setup requirements before running the project.
