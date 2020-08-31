@@ -1,21 +1,25 @@
 import React, { useState, useContext, useCallback } from 'react';
+import { useHistory } from 'react-router';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonButton, IonItem, IonInput, IonLabel, IonAlert } from '@ionic/react';
+import { auth } from '../'
+import { AuthUserContext } from '../firebase/AuthUserContext';
 
 const Login: React.FC = () => {
 
 	const [email, setEmail] = useState<string>("");
 	const [password, setPassword] = useState<string>("");
 	const [alertText, setAlertText] = useState('');
+	const history = useHistory();
 
 	const onLoginin = useCallback(() => {
         if (!email.length) {
             setAlertText('Email is required!');
-        } 
-
-        if (!password.length) {
+        } else if (!password.length) {
             setAlertText('Password is required');
-        }
-    }, []);
+        } else {
+			auth.signInWithEmailAndPassword(email, password).then((response) => history.push('/currentsurveys'));
+		}
+    }, [password, email, history]);
 
 	return (
 		<IonPage>
