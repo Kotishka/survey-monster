@@ -39,10 +39,10 @@ This is a sample app for a programming assignment in CS 4261. The goal is to use
 
 Run the following in a new terminal window:
 ```
-node --version
-npm --version
+node -v
+npm -v
 ```
-Node should be at least v14.7.0 and npm should at least be 6.14.7. To download the latest verison, go to nodejs.org/en/download/.
+Node should be at least v12.18.3 and npm should at least be 6.14.6. To download the latest verison, go to [nodejs.org/en/download/](nodejs.org/en/download/).
 
 2. Install Ionic CLI with npm:
 ```
