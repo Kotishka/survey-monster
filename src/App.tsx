@@ -38,7 +38,6 @@ import Home from './pages/Home';
 import SignUp from './pages/SignUp';
 import Profile from './pages/Profile';
 import Create from './pages/Create';
-import MainTabs from './MainTabs';
 import CurrentSurveys from './pages/CurrentSurveys';
 import { UserContext } from '.';
 import { brushSharp, fileTrayFull, personOutline } from 'ionicons/icons';
@@ -54,12 +53,11 @@ const IonicApp: React.FC = () => {
               <Route path="/login" component={Login} exact />
               <Route path="/signup" component={SignUp} exact />
               <Route path="/Profile" component={Profile} exact />
-              <Route path="/MainTabs" component={MainTabs} exact />
               <Route path="/Create" component={Create} exact />
               <Route path="/CurrentSurveys" component={CurrentSurveys} exact />
               <Route exact path="/" render={() => <Redirect to="/home" />} />
             </IonRouterOutlet>
-            <IonTabBar slot="bottom">
+            <IonTabBar slot="bottom" id="main-tabs" class="show-tabs">
               <IonTabButton tab="CurrentSurveys" href="/CurrentSurveys">
                 <IonIcon icon={fileTrayFull} />
                 <IonLabel>Surveys</IonLabel>

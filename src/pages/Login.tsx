@@ -2,7 +2,8 @@ import React, { useState, useContext, useCallback, useEffect } from 'react';
 import { useHistory } from 'react-router';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonButton, IonItem, IonInput, IonLabel, IonAlert } from '@ionic/react';
 import { auth } from '../'
-import { AuthUserContext } from '../firebase/AuthUserContext';
+//import { AuthUserContext } from '../firebase/AuthUserContext';
+
 
 const Login: React.FC = () => {
 

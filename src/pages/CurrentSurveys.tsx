@@ -1,7 +1,5 @@
 import React from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent, IonItem, IonIcon, IonLabel, IonButton, IonMenuButton, IonMenu, IonList, IonMenuToggle, IonButtons } from '@ionic/react';
-import MainTabs from '../MainTabs';
-import Menu from '../components/Menu';
 
 const CurrentSurveys: React.FC = () => {
   return (
