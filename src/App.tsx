@@ -7,7 +7,9 @@ import {
   IonRouterOutlet,
   IonTabBar,
   IonTabButton,
-  IonTabs
+  IonTabs,
+  IonSplitPane,
+  IonMenuToggle
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 
@@ -36,38 +38,50 @@ import Home from './pages/Home';
 import SignUp from './pages/SignUp';
 import Profile from './pages/Profile';
 import Create from './pages/Create';
-import MainTabs from './pages/MainTabs';
+import MainTabs from './MainTabs';
 import CurrentSurveys from './pages/CurrentSurveys';
 import { UserContext } from '.';
+import { brushSharp, fileTrayFull, personOutline } from 'ionicons/icons';
 
 
 const IonicApp: React.FC = () => {
-
-  const user = useContext(UserContext);
-
   return (
     <IonApp>
-      {user ? ( <CurrentSurveys /> ) : ( 
-      <IonReactRouter>
-        <IonRouterOutlet>
-          <Route path="/home" component={Home} exact />
-          <Route path="/login" component={Login} exact />
-          <Route path="/signup" component={SignUp} exact />
-          <Route path="/profile" component={Profile} exact />
-          <Route path="/MainTabs" component={MainTabs} exact />
-          <Route path="/Create" component={Create} exact />
-          <Route path="/CurrentSurveys" component={CurrentSurveys} exact />
-          <Route exact path="/" render={() => <Redirect to="/home"/>} />
-        </IonRouterOutlet>
-      </IonReactRouter>
-      )}
+        <IonReactRouter>
+          <IonTabs>
+            <IonRouterOutlet>
+              <Route path="/home" component={Home} exact />
+              <Route path="/login" component={Login} exact />
+              <Route path="/signup" component={SignUp} exact />
+              <Route path="/Profile" component={Profile} exact />
+              <Route path="/MainTabs" component={MainTabs} exact />
+              <Route path="/Create" component={Create} exact />
+              <Route path="/CurrentSurveys" component={CurrentSurveys} exact />
+              <Route exact path="/" render={() => <Redirect to="/home" />} />
+            </IonRouterOutlet>
+            <IonTabBar slot="bottom">
+              <IonTabButton tab="CurrentSurveys" href="/CurrentSurveys">
+                <IonIcon icon={fileTrayFull} />
+                <IonLabel>Surveys</IonLabel>
+              </IonTabButton>
+              <IonTabButton tab="Create" href="/CreateSurveys">
+                <IonIcon icon={brushSharp} />
+                <IonLabel>Create</IonLabel>
+              </IonTabButton>
+              <IonTabButton tab="Profile" href="/Profile">
+                <IonIcon icon={personOutline} />
+                <IonLabel>Profile</IonLabel>
+              </IonTabButton>
+            </IonTabBar>
+          </IonTabs>
+        </IonReactRouter>
     </IonApp>
   );
 };
 
 const App: React.FC = () => {
   return (
-      <IonicApp />
+    <IonicApp />
   );
 };
 
