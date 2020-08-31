@@ -7,6 +7,7 @@
 * [Learning Experiences](#learing-experiences)
 * [Setup](#setup)
 * [Running the Project](#running-the-project)
+* [Sample Account](#sample-account)
 * [UI](#UI)
 
 ## About
@@ -49,6 +50,13 @@ Node should be at least v12.18.3 and npm should at least be 6.14.6. To download 
 npm install -g @ionic/cli
 ```
 
+3. Install React Scripts with npm in the survey-monster directory:
+```
+npm install react-scripts
+```
+
+It may show some error message about dependencies, but let it run and it should work.
+
 Now you can run the project!
 
 ## Running the Project
@@ -59,4 +67,15 @@ You may deploy the project either locally on web browser or on android. Please m
 ionic serve
 ```
 
+Go to [localhost:8100](localhost:8100) to see the project.
+
+## Sample Account
+Because the app is using a login feature, you may use the following account:
+```
+Email: yboyko3@gatech.edu
+Password: 123456
+```
+
 ## UI
+
+
