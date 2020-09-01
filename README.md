@@ -27,12 +27,12 @@ Currently you may see the app here: [https://survey-master-96ff0.web.app/](https
 
 ## Guides Followed
 
-* [https://ionicframework.com/docs/developing/starting](Ionic Framework Start Developing)
-* [https://firebase.google.com/docs/web/setup#create-firebase-project](Google Firebase Setup)
-* [https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial/](Firebase React Authentication Tutorial)
-* [https://ionicframework.com/docs/developing/android](Ionic Framework Deploying to Android)
-* [https://codesandbox.io/s/ionicreacttabsso-1zmny?file=/src/App.tsx](Sample Typescript App with login)
-* [https://www.youtube.com/watch?v=q_fqvkyvbNg](Ionic React Firebase Sample App Walkthrough)
+* [Ionic Framework Start Developing](https://ionicframework.com/docs/developing/starting)
+* [Google Firebase Setup](https://firebase.google.com/docs/web/setup#create-firebase-project)
+* [Firebase React Authentication Tutorial](https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial/)
+* [Ionic Framework Deploying to Android](https://ionicframework.com/docs/developing/android)
+* [Codesandbox Sample Typescript App with log](https://codesandbox.io/s/ionicreacttabsso-1zmny?file=/src/App.tsx)
+* [Youtube Ionic React Firebase Sample App Walkthrough](https://www.youtube.com/watch?v=q_fqvkyvbNg)
 
 ## Learning Experiences
 
