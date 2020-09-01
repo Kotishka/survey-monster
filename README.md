@@ -80,13 +80,13 @@ Now you can run the project!
 
 You may deploy the project either locally on web browser or see the website here: [https://survey-master-96ff0.web.app/](https://survey-master-96ff0.web.app/). Please make sure that you have the setup requirements before running the project.
 
-* Web Browser
+Run this in a new terminal window, in the project directory to host the project locally:
 
-    ```(bash)
-    ionic serve
-    ```
+```(bash)
+ionic serve
+```
 
-    Go to [localhost:8100](localhost:8100) to see the project.
+Go to [localhost:8100](localhost:8100) to see the project.
 
 ## Sample Account
 
