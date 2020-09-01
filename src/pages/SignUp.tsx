@@ -1,8 +1,7 @@
-import React, { useState, useContext, useCallback, useEffect } from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonButton, IonItem, IonInput, IonLabel, IonAlert } from '@ionic/react';
+import React, { useState, useCallback } from 'react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonCard, IonCardContent, IonButton, IonItem, IonInput, IonLabel, IonAlert } from '@ionic/react';
 import { useHistory } from 'react-router';
-import { auth } from '../'
-import firebase from 'firebase';
+import { auth } from '../';
 
 const SignUp: React.FC = () => {
 

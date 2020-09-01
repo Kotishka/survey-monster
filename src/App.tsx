@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import { Redirect, Route } from 'react-router-dom';
 import {
   IonApp,
@@ -7,9 +7,7 @@ import {
   IonRouterOutlet,
   IonTabBar,
   IonTabButton,
-  IonTabs,
-  IonSplitPane,
-  IonMenuToggle
+  IonTabs
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 

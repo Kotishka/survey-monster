@@ -1,4 +1,4 @@
-import React, { useState, useContext, useCallback, useEffect } from 'react';
+import React, { useState, useCallback } from 'react';
 import { useHistory } from 'react-router';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonButton, IonItem, IonInput, IonLabel, IonAlert } from '@ionic/react';
 import { auth } from '../'
@@ -37,11 +37,11 @@ const Login: React.FC = () => {
 
 					<IonCardContent>
 						<IonItem>
-							<IonLabel position="fixed">Email</IonLabel>
+							<IonLabel>Email</IonLabel>
 							<IonInput value={email} placeholder="example@example.com" type="email" onIonChange={(e: any) => setEmail(e.target.value)} required />
 						</IonItem>
 						<IonItem>
-							<IonLabel position="fixed">Password</IonLabel>
+							<IonLabel>Password</IonLabel>
 							<IonInput value={password} placeholder="password" type="password" onIonChange={(e: any) => setPassword(e.target.value)} required />
 						</IonItem>
 						<IonButton expand="block" onClick={onLoginin} class="ion-padding">Login</IonButton>

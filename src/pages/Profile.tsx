@@ -1,20 +1,22 @@
-import React, { useState, useCallback, useContext } from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonButton, IonItem, IonInput, IonLabel, IonRouterLink } from '@ionic/react';
-import { auth } from 'firebase';
+import React, { useCallback, useContext } from 'react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonCard, IonCardContent, IonButton, IonItem, IonLabel } from '@ionic/react';
 import { UserContext } from '..';
 import firebase from 'firebase';
 
 const Profile: React.FC = () => {
 
-  const [text, setText] = useState<string>();
+  //const [text, setText] = useState<string>();
   const user = useContext(UserContext);
+  var email, name;
 
   const signOut = useCallback(() => {
     firebase.auth().signOut();
   }, []);
 
-  const email = user.email;
-  const name = user.displayName;
+  if (user) {
+    email = user.email;
+    name = user.displayName;
+  }
 
   return (
     <IonPage>
@@ -27,11 +29,11 @@ const Profile: React.FC = () => {
         <IonCard>
           <IonCardContent>
           <IonItem>
-              <IonLabel position="fixed">Name</IonLabel>
+              <IonLabel>Name</IonLabel>
               { name }
             </IonItem>
             <IonItem>
-              <IonLabel position="fixed">Email</IonLabel>
+              <IonLabel>Email</IonLabel>
               { email }
             </IonItem>
           </IonCardContent>

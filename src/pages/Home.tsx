@@ -1,6 +1,5 @@
-import React, { useEffect, constructor } from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonTabs, IonTabBar, } from '@ionic/react';
-import { analytics } from 'firebase';
+import React from 'react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton } from '@ionic/react';
 
 const Home: React.FC = () => {
 
