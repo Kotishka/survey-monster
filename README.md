@@ -27,12 +27,12 @@ Currently you may see the app here: [https://survey-master-96ff0.web.app/](https
 
 ## Guides Followed
 
-* [https://ionicframework.com/docs/developing/starting] (Ionic Framework Start Developing)
-* [https://firebase.google.com/docs/web/setup#create-firebase-project] (Google Firebase Setup)
-* [https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial/] (Firebase React Authentication Tutorial)
-* [https://ionicframework.com/docs/developing/android] (Ionic Framework Deploying to Android)
-* [https://codesandbox.io/s/ionicreacttabsso-1zmny?file=/src/App.tsx] (Sample Typescript App with login)
-* [https://www.youtube.com/watch?v=q_fqvkyvbNg] (Ionic React Firebase Sample App Walkthrough)
+* [https://ionicframework.com/docs/developing/starting](Ionic Framework Start Developing)
+* [https://firebase.google.com/docs/web/setup#create-firebase-project](Google Firebase Setup)
+* [https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial/](Firebase React Authentication Tutorial)
+* [https://ionicframework.com/docs/developing/android](Ionic Framework Deploying to Android)
+* [https://codesandbox.io/s/ionicreacttabsso-1zmny?file=/src/App.tsx](Sample Typescript App with login)
+* [https://www.youtube.com/watch?v=q_fqvkyvbNg](Ionic React Firebase Sample App Walkthrough)
 
 ## Learning Experiences
 
@@ -54,10 +54,8 @@ Currently you may see the app here: [https://survey-master-96ff0.web.app/](https
     Run the following in a new terminal window:
 
     ```(bash)
-
     node -v
     npm -v
-
     ```
 
     Node should be at least v12.18.3 and npm should at least be 6.14.6. To download the latest verison, go to [nodejs.org/en/download/](nodejs.org/en/download/).
@@ -65,17 +63,13 @@ Currently you may see the app here: [https://survey-master-96ff0.web.app/](https
 2. Install Ionic CLI with npm:
 
     ```(bash)
-
     npm install -g @ionic/cli
-
     ```
 
 3. Install React Scripts with npm in the survey-monster directory:
 
     ```(bash)
-
     npm install react-scripts
-
     ```
 
 It may show some error message about dependencies, but let it run and it should work.
@@ -89,9 +83,7 @@ You may deploy the project either locally on web browser or see the website here
 * Web Broswer
 
     ```(bash)
-
     ionic serve
-
     ```
 
     Go to [localhost:8100](localhost:8100) to see the project.
@@ -101,10 +93,12 @@ You may deploy the project either locally on web browser or see the website here
 Because the app is using a login feature, you may use the following account:
 
 ```(bash)
-
 Email: yboyko3@gatech.edu
 Password: 123456
-
 ```
 
 ## UI
+
+![Welcome Page](https://raw.githubusercontent.com/Kotishka/survey-monster/master/resources/Home.PNG "Welcome Page")
+![Login Page](https://raw.githubusercontent.com/Kotishka/survey-monster/master/resources/Login.PNG "Login Page")
+![Sign up Page](https://raw.githubusercontent.com/Kotishka/survey-monster/master/resources/SignUpPage.PNG "Sign Up Page")
