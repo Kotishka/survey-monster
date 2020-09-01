@@ -2,6 +2,7 @@ import React, { useState, useContext, useCallback, useEffect } from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonButton, IonItem, IonInput, IonLabel, IonAlert } from '@ionic/react';
 import { useHistory } from 'react-router';
 import { auth } from '../'
+import firebase from 'firebase';
 
 const SignUp: React.FC = () => {
 
@@ -23,9 +24,9 @@ const SignUp: React.FC = () => {
         } else if (confirmPassword !== password) {
             setAlertText('Passwords do not match.');
         } else {
-
+            auth.createUserWithEmailAndPassword(email, password).then((response) => history.push('/currentsurveys'));
         }
-    }, [email, confirmPassword, password]);
+    }, [email, confirmPassword, password, history]);
 
     return (
         <IonPage>
@@ -46,11 +47,11 @@ const SignUp: React.FC = () => {
                             <IonInput value={password} placeholder="Password" type="password" onIonChange={(e: any) => setPassword(e.target.value)} required />
                         </IonItem>
                         <IonItem>
-                            <IonLabel position="fixed">Confirm Password</IonLabel>
+                            <IonLabel position="fixed">Confirm</IonLabel>
                             <IonInput value={confirmPassword} placeholder="Confirm Password" type="password" onIonChange={(e: any) => setConfirmPassword(e.target.value)} required />
                         </IonItem>
-                        <IonButton expand="block" onClick={onSignup}>Sign Up</IonButton>
-                        <IonButton expand="block" routerLink="/login">Login Instead</IonButton>
+                        <IonButton expand="block" onClick={onSignup} class="ion-padding">Sign Up</IonButton>
+                        <IonButton expand="block" routerLink="/login" class="ion-padding">Login Instead</IonButton>
                         <IonAlert
                             isOpen={alertText.length > 0}
                             onDidDismiss={() => setAlertText('')}
