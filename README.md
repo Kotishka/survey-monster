@@ -32,10 +32,16 @@ Currently you may see the app here: [https://survey-master-96ff0.web.app/](https
 - https://www.youtube.com/watch?v=SKzMHle1Dl0
 
 ## Learning Experiences
-- Learning the basics of a new framework
+- Learning the basics of a new framework, Ionic
 - Expanding my knowledge on React
 - Learning parts of Typescript
 - Debugging new issues
+- Adding login and sign up pages
+- Adding Password Authentication using Firebase
+- Adding a signout feature
+- Hosting the app on a website
+- Learning how to deploy the app onto Android
+- Adding features such as alerts through Ionic
 
 ## Setup
 1. Make sure that Node and npm are are the latest version. 
