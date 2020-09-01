@@ -12,8 +12,8 @@ const Home: React.FC = () => {
                 </IonToolbar>
             </IonHeader>
             <IonContent>
-                <IonButton expand="block" routerLink="/login">Login</IonButton>
-                <IonButton expand="block" routerLink="/signup">Sign Up</IonButton>
+                <IonButton expand="block" routerLink="/login" class="ion-padding">Login</IonButton>
+                <IonButton expand="block" routerLink="/signup" class="ion-padding">Sign Up</IonButton>
             </IonContent>
         </IonPage>
     );

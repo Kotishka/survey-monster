@@ -44,8 +44,8 @@ const Login: React.FC = () => {
 							<IonLabel position="fixed">Password</IonLabel>
 							<IonInput value={password} placeholder="password" type="password" onIonChange={(e: any) => setPassword(e.target.value)} required />
 						</IonItem>
-						<IonButton expand="block" onClick={onLoginin}>Login</IonButton>
-						<IonButton expand="block" routerLink="/signup">Sign Up instead</IonButton>
+						<IonButton expand="block" onClick={onLoginin} class="ion-padding">Login</IonButton>
+						<IonButton expand="block" routerLink="/signup" class="ion-padding">Sign Up instead</IonButton>
 						<IonAlert
                             isOpen={alertText.length > 0}
                             onDidDismiss={() => setAlertText('')}
